@@ -14,7 +14,7 @@ module.exports = function({ file, maxSize, type }) {
                     const img = new Image();
                     img.src = event.target.result;
                     img.onload = () => {
-                        const elem = document.createElement('canvas'), width = img.width, height = img.height;
+                        var elem = document.createElement('canvas'), width = img.width, height = img.height;
 
                         if (width > height) {
                             if (width > max_size) {
